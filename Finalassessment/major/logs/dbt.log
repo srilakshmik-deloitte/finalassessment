@@ -4059,3 +4059,435 @@ where id = 1
 08:27:25.354521 [info ] [MainThread]: 
 08:27:25.354521 [info ] [MainThread]: Done. PASS=6 WARN=0 ERROR=1 SKIP=0 TOTAL=7
 08:27:25.354521 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000015A6EE03EE0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000015A6EE03D90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000015A6F485300>]}
+
+
+============================== 2022-06-02 08:51:06.625352 | 122b266f-8896-4ef7-b214-7a66ca376c8c ==============================
+08:51:06.625352 [info ] [MainThread]: Running with dbt=1.1.0
+08:51:06.625352 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': 'C:\\Users\\srkomirisetti\\.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+08:51:06.625352 [debug] [MainThread]: Tracking: tracking
+08:51:06.625352 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002635BD5C7F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002635BD5FE20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002635BD5FE50>]}
+08:51:06.742863 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 4 files added, 0 files changed.
+08:51:06.742863 [debug] [MainThread]: Partial parsing: added file: major://models\example\milestone2_6.sql
+08:51:06.742863 [debug] [MainThread]: Partial parsing: added file: major://models\example\milestone2_4.sql
+08:51:06.742863 [debug] [MainThread]: Partial parsing: added file: major://models\example\milestone2_3.sql
+08:51:06.742863 [debug] [MainThread]: Partial parsing: added file: major://models\example\milestone2_5.sql
+08:51:06.758494 [debug] [MainThread]: 1699: static parser successfully parsed example\milestone2_6.sql
+08:51:06.774123 [debug] [MainThread]: 1699: static parser successfully parsed example\milestone2_4.sql
+08:51:06.774123 [debug] [MainThread]: 1699: static parser successfully parsed example\milestone2_3.sql
+08:51:06.789747 [debug] [MainThread]: 1699: static parser successfully parsed example\milestone2_5.sql
+08:51:06.805374 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '122b266f-8896-4ef7-b214-7a66ca376c8c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002635BEC40D0>]}
+08:51:06.805374 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '122b266f-8896-4ef7-b214-7a66ca376c8c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002635BE57760>]}
+08:51:06.805374 [info ] [MainThread]: Found 11 models, 6 tests, 0 snapshots, 0 analyses, 181 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+08:51:06.805374 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '122b266f-8896-4ef7-b214-7a66ca376c8c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002635ADE77F0>]}
+08:51:06.805374 [info ] [MainThread]: 
+08:51:06.805374 [debug] [MainThread]: Acquiring new snowflake connection "master"
+08:51:06.842973 [debug] [ThreadPool]: Acquiring new snowflake connection "list_finalassessment_db"
+08:51:06.842973 [debug] [ThreadPool]: Using snowflake connection "list_finalassessment_db"
+08:51:06.858603 [debug] [ThreadPool]: On list_finalassessment_db: /* {"app": "dbt", "dbt_version": "1.1.0", "profile_name": "major", "target_name": "dev", "connection_name": "list_finalassessment_db"} */
+
+    show terse schemas in database finalassessment_db
+    limit 10000
+08:51:06.858603 [debug] [ThreadPool]: Opening a new connection, currently in state init
+08:51:07.791459 [debug] [ThreadPool]: SQL status: SUCCESS 2 in 0.93 seconds
+08:51:07.791459 [debug] [ThreadPool]: On list_finalassessment_db: Close
+08:51:07.924479 [debug] [ThreadPool]: Acquiring new snowflake connection "list_finalassessment_db_final"
+08:51:07.924479 [debug] [ThreadPool]: Using snowflake connection "list_finalassessment_db_final"
+08:51:07.924479 [debug] [ThreadPool]: On list_finalassessment_db_final: /* {"app": "dbt", "dbt_version": "1.1.0", "profile_name": "major", "target_name": "dev", "connection_name": "list_finalassessment_db_final"} */
+
+    show terse objects in finalassessment_db.final
+08:51:07.924479 [debug] [ThreadPool]: Opening a new connection, currently in state init
+08:51:08.623411 [debug] [ThreadPool]: SQL status: SUCCESS 11 in 0.7 seconds
+08:51:08.623411 [debug] [ThreadPool]: On list_finalassessment_db_final: Close
+08:51:08.793486 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '122b266f-8896-4ef7-b214-7a66ca376c8c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002635ADE77F0>]}
+08:51:08.793486 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+08:51:08.793486 [info ] [MainThread]: 
+08:51:08.809113 [debug] [Thread-1 (]: Began running node model.major.latestmutual
+08:51:08.809113 [info ] [Thread-1 (]: 1 of 11 START table model final.latestmutual ................................... [RUN]
+08:51:08.809113 [debug] [Thread-1 (]: Acquiring new snowflake connection "model.major.latestmutual"
+08:51:08.809113 [debug] [Thread-1 (]: Began compiling node model.major.latestmutual
+08:51:08.809113 [debug] [Thread-1 (]: Compiling model.major.latestmutual
+08:51:08.809113 [debug] [Thread-1 (]: Writing injected SQL for node "model.major.latestmutual"
+08:51:08.809113 [debug] [Thread-1 (]: finished collecting timing info
+08:51:08.809113 [debug] [Thread-1 (]: Began executing node model.major.latestmutual
+08:51:08.849858 [debug] [Thread-1 (]: Writing runtime SQL for node "model.major.latestmutual"
+08:51:08.849858 [debug] [Thread-1 (]: Using snowflake connection "model.major.latestmutual"
+08:51:08.849858 [debug] [Thread-1 (]: On model.major.latestmutual: /* {"app": "dbt", "dbt_version": "1.1.0", "profile_name": "major", "target_name": "dev", "node_id": "model.major.latestmutual"} */
+
+
+      create or replace transient table finalassessment_db.final.latestmutual  as
+      (
+
+select max(n."nav_date") as latest,f."CATEGORY" from
+"FINALASSESSMENT_DB"."FINAL"."NAVHISTORY" n,"FINALASSESSMENT_DB"."FINAL"."FUNDCATEGORY" f,"FINALASSESSMENT_DB"."FINAL"."MUTUALFUND" m
+where m."category_id"=f."ID"
+and m."code"=n."code" group by f."CATEGORY"
+      );
+08:51:08.849858 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+08:51:11.347321 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 2.5 seconds
+08:51:11.357324 [debug] [Thread-1 (]: finished collecting timing info
+08:51:11.357324 [debug] [Thread-1 (]: On model.major.latestmutual: Close
+08:51:11.497157 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '122b266f-8896-4ef7-b214-7a66ca376c8c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002635C43FDF0>]}
+08:51:11.497157 [info ] [Thread-1 (]: 1 of 11 OK created table model final.latestmutual .............................. [[32mSUCCESS 1[0m in 2.69s]
+08:51:11.497157 [debug] [Thread-1 (]: Finished running node model.major.latestmutual
+08:51:11.497157 [debug] [Thread-1 (]: Began running node model.major.milestone1_1
+08:51:11.497157 [info ] [Thread-1 (]: 2 of 11 START table model final.milestone1_1 ................................... [RUN]
+08:51:11.497157 [debug] [Thread-1 (]: Acquiring new snowflake connection "model.major.milestone1_1"
+08:51:11.497157 [debug] [Thread-1 (]: Began compiling node model.major.milestone1_1
+08:51:11.497157 [debug] [Thread-1 (]: Compiling model.major.milestone1_1
+08:51:11.497157 [debug] [Thread-1 (]: Writing injected SQL for node "model.major.milestone1_1"
+08:51:11.497157 [debug] [Thread-1 (]: finished collecting timing info
+08:51:11.497157 [debug] [Thread-1 (]: Began executing node model.major.milestone1_1
+08:51:11.512782 [debug] [Thread-1 (]: Writing runtime SQL for node "model.major.milestone1_1"
+08:51:11.516976 [debug] [Thread-1 (]: Using snowflake connection "model.major.milestone1_1"
+08:51:11.518076 [debug] [Thread-1 (]: On model.major.milestone1_1: /* {"app": "dbt", "dbt_version": "1.1.0", "profile_name": "major", "target_name": "dev", "node_id": "model.major.milestone1_1"} */
+
+
+      create or replace transient table finalassessment_db.final.milestone1_1  as
+      (
+
+select a."NAME",month(n."nav_date") as month,avg(n."nav") as avg_nav,avg(n."repurchase_price") as avg_repurchase,
+avg(n."sale_price") as avg_sale_price from "FINALASSESSMENT_DB"."FINAL"."NAVHISTORY" as n,
+"FINALASSESSMENT_DB"."FINAL"."AMC" as a,
+"FINALASSESSMENT_DB"."FINAL"."MUTUALFUND" as m
+where m."amc_id"=a."ID"
+and m."code"=n."code" group by a."NAME",month(n."nav_date")
+      );
+08:51:11.518076 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+08:51:13.234521 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 1.72 seconds
+08:51:13.234521 [debug] [Thread-1 (]: finished collecting timing info
+08:51:13.234521 [debug] [Thread-1 (]: On model.major.milestone1_1: Close
+08:51:13.366656 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '122b266f-8896-4ef7-b214-7a66ca376c8c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002635C49F2E0>]}
+08:51:13.367656 [info ] [Thread-1 (]: 2 of 11 OK created table model final.milestone1_1 .............................. [[32mSUCCESS 1[0m in 1.87s]
+08:51:13.368656 [debug] [Thread-1 (]: Finished running node model.major.milestone1_1
+08:51:13.369656 [debug] [Thread-1 (]: Began running node model.major.milestone1_2
+08:51:13.370656 [info ] [Thread-1 (]: 3 of 11 START table model final.milestone1_2 ................................... [RUN]
+08:51:13.371656 [debug] [Thread-1 (]: Acquiring new snowflake connection "model.major.milestone1_2"
+08:51:13.371656 [debug] [Thread-1 (]: Began compiling node model.major.milestone1_2
+08:51:13.372657 [debug] [Thread-1 (]: Compiling model.major.milestone1_2
+08:51:13.375657 [debug] [Thread-1 (]: Writing injected SQL for node "model.major.milestone1_2"
+08:51:13.377658 [debug] [Thread-1 (]: finished collecting timing info
+08:51:13.377658 [debug] [Thread-1 (]: Began executing node model.major.milestone1_2
+08:51:13.380659 [debug] [Thread-1 (]: Writing runtime SQL for node "model.major.milestone1_2"
+08:51:13.382659 [debug] [Thread-1 (]: Using snowflake connection "model.major.milestone1_2"
+08:51:13.382659 [debug] [Thread-1 (]: On model.major.milestone1_2: /* {"app": "dbt", "dbt_version": "1.1.0", "profile_name": "major", "target_name": "dev", "node_id": "model.major.milestone1_2"} */
+
+
+      create or replace transient table finalassessment_db.final.milestone1_2  as
+      (
+
+select a."NAME",min(n."nav_date") as date,max(n."nav") as Max_NAV,
+min(n."nav") as min_nav
+from "FINALASSESSMENT_DB"."FINAL"."NAVHISTORY" as n,
+"FINALASSESSMENT_DB"."FINAL"."AMC" as a,
+"FINALASSESSMENT_DB"."FINAL"."MUTUALFUND" as m
+where m."amc_id"=a."ID"
+and m."code"=n."code"
+group by a."NAME"
+
+
+/*select
+value:"@Name" as Name,
+value:"@"*/
+      );
+08:51:13.383659 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+08:51:15.303986 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 1.92 seconds
+08:51:15.310659 [debug] [Thread-1 (]: finished collecting timing info
+08:51:15.311660 [debug] [Thread-1 (]: On model.major.milestone1_2: Close
+08:51:15.458692 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '122b266f-8896-4ef7-b214-7a66ca376c8c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002635C4897E0>]}
+08:51:15.459693 [info ] [Thread-1 (]: 3 of 11 OK created table model final.milestone1_2 .............................. [[32mSUCCESS 1[0m in 2.09s]
+08:51:15.460693 [debug] [Thread-1 (]: Finished running node model.major.milestone1_2
+08:51:15.461693 [debug] [Thread-1 (]: Began running node model.major.milestone2_1
+08:51:15.461693 [info ] [Thread-1 (]: 4 of 11 START table model final.milestone2_1 ................................... [RUN]
+08:51:15.463694 [debug] [Thread-1 (]: Acquiring new snowflake connection "model.major.milestone2_1"
+08:51:15.463694 [debug] [Thread-1 (]: Began compiling node model.major.milestone2_1
+08:51:15.464694 [debug] [Thread-1 (]: Compiling model.major.milestone2_1
+08:51:15.467694 [debug] [Thread-1 (]: Writing injected SQL for node "model.major.milestone2_1"
+08:51:15.469695 [debug] [Thread-1 (]: finished collecting timing info
+08:51:15.470695 [debug] [Thread-1 (]: Began executing node model.major.milestone2_1
+08:51:15.474696 [debug] [Thread-1 (]: Writing runtime SQL for node "model.major.milestone2_1"
+08:51:15.478697 [debug] [Thread-1 (]: Using snowflake connection "model.major.milestone2_1"
+08:51:15.479697 [debug] [Thread-1 (]: On model.major.milestone2_1: /* {"app": "dbt", "dbt_version": "1.1.0", "profile_name": "major", "target_name": "dev", "node_id": "model.major.milestone2_1"} */
+
+
+      create or replace transient table finalassessment_db.final.milestone2_1  as
+      (
+
+select cast(getdate() as date) as ends_nav,(select n1."nav" from "FINALASSESSMENT_DB"."FINAL"."NAVHISTORY" n1
+where n1."nav_date"=datefromparts(year(n1."nav_date"),02,06)
+and n1."code"=n2."code") as end_nav,
+(select n1."nav" from "FINALASSESSMENT_DB"."FINAL"."NAVHISTORY" n1
+where n1."nav_date"=datefromparts(year(n1."nav_date"),01,01)
+and n1."code"=n2."code") as start_nav,
+((end_nav-start_nav)/start_nav*100) as ytd
+from "FINALASSESSMENT_DB"."FINAL"."NAVHISTORY" n2
+order by n2."nav_date" asc
+      );
+08:51:15.479697 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+08:51:16.161306 [debug] [Thread-1 (]: Snowflake adapter: Snowflake query id: 01a4acb3-0000-2c79-0003-99be0002a122
+08:51:16.161306 [debug] [Thread-1 (]: Snowflake adapter: Snowflake error: 002031 (42601): SQL compilation error:
+Unsupported subquery type cannot be evaluated
+08:51:16.161306 [debug] [Thread-1 (]: finished collecting timing info
+08:51:16.161306 [debug] [Thread-1 (]: On model.major.milestone2_1: Close
+08:51:16.299849 [debug] [Thread-1 (]: Database Error in model milestone2_1 (models\example\milestone2_1.sql)
+  002031 (42601): SQL compilation error:
+  Unsupported subquery type cannot be evaluated
+  compiled SQL at target\run\major\models\example\milestone2_1.sql
+08:51:16.300850 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '122b266f-8896-4ef7-b214-7a66ca376c8c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002635C4BEFB0>]}
+08:51:16.301850 [error] [Thread-1 (]: 4 of 11 ERROR creating table model final.milestone2_1 .......................... [[31mERROR[0m in 0.84s]
+08:51:16.301850 [debug] [Thread-1 (]: Finished running node model.major.milestone2_1
+08:51:16.302850 [debug] [Thread-1 (]: Began running node model.major.milestone2_2
+08:51:16.303851 [info ] [Thread-1 (]: 5 of 11 START table model final.milestone2_2 ................................... [RUN]
+08:51:16.304851 [debug] [Thread-1 (]: Acquiring new snowflake connection "model.major.milestone2_2"
+08:51:16.305851 [debug] [Thread-1 (]: Began compiling node model.major.milestone2_2
+08:51:16.305851 [debug] [Thread-1 (]: Compiling model.major.milestone2_2
+08:51:16.309852 [debug] [Thread-1 (]: Writing injected SQL for node "model.major.milestone2_2"
+08:51:16.311852 [debug] [Thread-1 (]: finished collecting timing info
+08:51:16.311852 [debug] [Thread-1 (]: Began executing node model.major.milestone2_2
+08:51:16.314853 [debug] [Thread-1 (]: Writing runtime SQL for node "model.major.milestone2_2"
+08:51:16.316853 [debug] [Thread-1 (]: Using snowflake connection "model.major.milestone2_2"
+08:51:16.316853 [debug] [Thread-1 (]: On model.major.milestone2_2: /* {"app": "dbt", "dbt_version": "1.1.0", "profile_name": "major", "target_name": "dev", "node_id": "model.major.milestone2_2"} */
+
+
+      create or replace transient table finalassessment_db.final.milestone2_2  as
+      (
+
+select f."CATEGORY" from "FINALASSESSMENT_DB"."FINAL"."NAVHISTORY" n,"FINALASSESSMENT_DB"."FINAL"."FUNDCATEGORY"f,
+"FINALASSESSMENT_DB"."FINAL"."MUTUALFUND" m where m."category_id"=f."ID"
+and m."code"=n."code" and n."nav_date" >=dateadd(day,-90,getdate()) order by f."CATEGORY" desc
+      );
+08:51:16.317854 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+08:51:17.228459 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.91 seconds
+08:51:17.244086 [debug] [Thread-1 (]: finished collecting timing info
+08:51:17.244086 [debug] [Thread-1 (]: On model.major.milestone2_2: Close
+08:51:17.379404 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '122b266f-8896-4ef7-b214-7a66ca376c8c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002635C4BCDF0>]}
+08:51:17.380403 [info ] [Thread-1 (]: 5 of 11 OK created table model final.milestone2_2 .............................. [[32mSUCCESS 1[0m in 1.07s]
+08:51:17.381404 [debug] [Thread-1 (]: Finished running node model.major.milestone2_2
+08:51:17.382402 [debug] [Thread-1 (]: Began running node model.major.milestone2_3
+08:51:17.383403 [info ] [Thread-1 (]: 6 of 11 START table model final.milestone2_3 ................................... [RUN]
+08:51:17.384402 [debug] [Thread-1 (]: Acquiring new snowflake connection "model.major.milestone2_3"
+08:51:17.385402 [debug] [Thread-1 (]: Began compiling node model.major.milestone2_3
+08:51:17.386402 [debug] [Thread-1 (]: Compiling model.major.milestone2_3
+08:51:17.389423 [debug] [Thread-1 (]: Writing injected SQL for node "model.major.milestone2_3"
+08:51:17.391788 [debug] [Thread-1 (]: finished collecting timing info
+08:51:17.392786 [debug] [Thread-1 (]: Began executing node model.major.milestone2_3
+08:51:17.393872 [debug] [Thread-1 (]: Writing runtime SQL for node "model.major.milestone2_3"
+08:51:17.393872 [debug] [Thread-1 (]: Using snowflake connection "model.major.milestone2_3"
+08:51:17.393872 [debug] [Thread-1 (]: On model.major.milestone2_3: /* {"app": "dbt", "dbt_version": "1.1.0", "profile_name": "major", "target_name": "dev", "node_id": "model.major.milestone2_3"} */
+
+
+      create or replace transient table finalassessment_db.final.milestone2_3  as
+      (
+      );
+08:51:17.393872 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+08:51:17.996776 [debug] [Thread-1 (]: Snowflake adapter: Snowflake query id: 01a4acb3-0000-2c79-0003-99be0002a126
+08:51:17.996776 [debug] [Thread-1 (]: Snowflake adapter: Snowflake error: 001003 (42000): SQL compilation error:
+syntax error line 3 at position 6 unexpected ')'.
+08:51:17.996776 [debug] [Thread-1 (]: finished collecting timing info
+08:51:17.996776 [debug] [Thread-1 (]: On model.major.milestone2_3: Close
+08:51:18.497545 [debug] [Thread-1 (]: Database Error in model milestone2_3 (models\example\milestone2_3.sql)
+  001003 (42000): SQL compilation error:
+  syntax error line 3 at position 6 unexpected ')'.
+  compiled SQL at target\run\major\models\example\milestone2_3.sql
+08:51:18.497545 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '122b266f-8896-4ef7-b214-7a66ca376c8c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002635C4BB850>]}
+08:51:18.497545 [error] [Thread-1 (]: 6 of 11 ERROR creating table model final.milestone2_3 .......................... [[31mERROR[0m in 1.11s]
+08:51:18.497545 [debug] [Thread-1 (]: Finished running node model.major.milestone2_3
+08:51:18.497545 [debug] [Thread-1 (]: Began running node model.major.milestone2_4
+08:51:18.497545 [info ] [Thread-1 (]: 7 of 11 START table model final.milestone2_4 ................................... [RUN]
+08:51:18.497545 [debug] [Thread-1 (]: Acquiring new snowflake connection "model.major.milestone2_4"
+08:51:18.497545 [debug] [Thread-1 (]: Began compiling node model.major.milestone2_4
+08:51:18.497545 [debug] [Thread-1 (]: Compiling model.major.milestone2_4
+08:51:18.513174 [debug] [Thread-1 (]: Writing injected SQL for node "model.major.milestone2_4"
+08:51:18.513174 [debug] [Thread-1 (]: finished collecting timing info
+08:51:18.513174 [debug] [Thread-1 (]: Began executing node model.major.milestone2_4
+08:51:18.513174 [debug] [Thread-1 (]: Writing runtime SQL for node "model.major.milestone2_4"
+08:51:18.513174 [debug] [Thread-1 (]: Using snowflake connection "model.major.milestone2_4"
+08:51:18.513174 [debug] [Thread-1 (]: On model.major.milestone2_4: /* {"app": "dbt", "dbt_version": "1.1.0", "profile_name": "major", "target_name": "dev", "node_id": "model.major.milestone2_4"} */
+
+
+      create or replace transient table finalassessment_db.final.milestone2_4  as
+      (
+      );
+08:51:18.513174 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+08:51:19.300713 [debug] [Thread-1 (]: Snowflake adapter: Snowflake query id: 01a4acb3-0000-2c75-0003-99be0002883a
+08:51:19.300713 [debug] [Thread-1 (]: Snowflake adapter: Snowflake error: 001003 (42000): SQL compilation error:
+syntax error line 3 at position 6 unexpected ')'.
+08:51:19.316336 [debug] [Thread-1 (]: finished collecting timing info
+08:51:19.316336 [debug] [Thread-1 (]: On model.major.milestone2_4: Close
+08:51:19.453989 [debug] [Thread-1 (]: Database Error in model milestone2_4 (models\example\milestone2_4.sql)
+  001003 (42000): SQL compilation error:
+  syntax error line 3 at position 6 unexpected ')'.
+  compiled SQL at target\run\major\models\example\milestone2_4.sql
+08:51:19.453989 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '122b266f-8896-4ef7-b214-7a66ca376c8c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002635BED4460>]}
+08:51:19.453989 [error] [Thread-1 (]: 7 of 11 ERROR creating table model final.milestone2_4 .......................... [[31mERROR[0m in 0.96s]
+08:51:19.453989 [debug] [Thread-1 (]: Finished running node model.major.milestone2_4
+08:51:19.453989 [debug] [Thread-1 (]: Began running node model.major.milestone2_5
+08:51:19.453989 [info ] [Thread-1 (]: 8 of 11 START table model final.milestone2_5 ................................... [RUN]
+08:51:19.453989 [debug] [Thread-1 (]: Acquiring new snowflake connection "model.major.milestone2_5"
+08:51:19.453989 [debug] [Thread-1 (]: Began compiling node model.major.milestone2_5
+08:51:19.453989 [debug] [Thread-1 (]: Compiling model.major.milestone2_5
+08:51:19.469616 [debug] [Thread-1 (]: Writing injected SQL for node "model.major.milestone2_5"
+08:51:19.469616 [debug] [Thread-1 (]: finished collecting timing info
+08:51:19.469616 [debug] [Thread-1 (]: Began executing node model.major.milestone2_5
+08:51:19.469616 [debug] [Thread-1 (]: Writing runtime SQL for node "model.major.milestone2_5"
+08:51:19.469616 [debug] [Thread-1 (]: Using snowflake connection "model.major.milestone2_5"
+08:51:19.469616 [debug] [Thread-1 (]: On model.major.milestone2_5: /* {"app": "dbt", "dbt_version": "1.1.0", "profile_name": "major", "target_name": "dev", "node_id": "model.major.milestone2_5"} */
+
+
+      create or replace transient table finalassessment_db.final.milestone2_5  as
+      (
+      );
+08:51:19.469616 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+08:51:20.242990 [debug] [Thread-1 (]: Snowflake adapter: Snowflake query id: 01a4acb3-0000-2c3d-0003-99be00026d26
+08:51:20.242990 [debug] [Thread-1 (]: Snowflake adapter: Snowflake error: 001003 (42000): SQL compilation error:
+syntax error line 3 at position 6 unexpected ')'.
+08:51:20.242990 [debug] [Thread-1 (]: finished collecting timing info
+08:51:20.242990 [debug] [Thread-1 (]: On model.major.milestone2_5: Close
+08:51:20.389324 [debug] [Thread-1 (]: Database Error in model milestone2_5 (models\example\milestone2_5.sql)
+  001003 (42000): SQL compilation error:
+  syntax error line 3 at position 6 unexpected ')'.
+  compiled SQL at target\run\major\models\example\milestone2_5.sql
+08:51:20.389324 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '122b266f-8896-4ef7-b214-7a66ca376c8c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002635C4B8520>]}
+08:51:20.390324 [error] [Thread-1 (]: 8 of 11 ERROR creating table model final.milestone2_5 .......................... [[31mERROR[0m in 0.94s]
+08:51:20.391324 [debug] [Thread-1 (]: Finished running node model.major.milestone2_5
+08:51:20.392324 [debug] [Thread-1 (]: Began running node model.major.milestone2_6
+08:51:20.392324 [info ] [Thread-1 (]: 9 of 11 START table model final.milestone2_6 ................................... [RUN]
+08:51:20.393325 [debug] [Thread-1 (]: Acquiring new snowflake connection "model.major.milestone2_6"
+08:51:20.394325 [debug] [Thread-1 (]: Began compiling node model.major.milestone2_6
+08:51:20.394325 [debug] [Thread-1 (]: Compiling model.major.milestone2_6
+08:51:20.397326 [debug] [Thread-1 (]: Writing injected SQL for node "model.major.milestone2_6"
+08:51:20.398326 [debug] [Thread-1 (]: finished collecting timing info
+08:51:20.398326 [debug] [Thread-1 (]: Began executing node model.major.milestone2_6
+08:51:20.401326 [debug] [Thread-1 (]: Writing runtime SQL for node "model.major.milestone2_6"
+08:51:20.403328 [debug] [Thread-1 (]: Using snowflake connection "model.major.milestone2_6"
+08:51:20.404326 [debug] [Thread-1 (]: On model.major.milestone2_6: /* {"app": "dbt", "dbt_version": "1.1.0", "profile_name": "major", "target_name": "dev", "node_id": "model.major.milestone2_6"} */
+
+
+      create or replace transient table finalassessment_db.final.milestone2_6  as
+      (
+      );
+08:51:20.404326 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+08:51:20.960682 [debug] [Thread-1 (]: Snowflake adapter: Snowflake query id: 01a4acb3-0000-2c79-0003-99be0002a12a
+08:51:20.960682 [debug] [Thread-1 (]: Snowflake adapter: Snowflake error: 001003 (42000): SQL compilation error:
+syntax error line 3 at position 6 unexpected ')'.
+08:51:20.960682 [debug] [Thread-1 (]: finished collecting timing info
+08:51:20.960682 [debug] [Thread-1 (]: On model.major.milestone2_6: Close
+08:51:21.096474 [debug] [Thread-1 (]: Database Error in model milestone2_6 (models\example\milestone2_6.sql)
+  001003 (42000): SQL compilation error:
+  syntax error line 3 at position 6 unexpected ')'.
+  compiled SQL at target\run\major\models\example\milestone2_6.sql
+08:51:21.097474 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '122b266f-8896-4ef7-b214-7a66ca376c8c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002635C49C1C0>]}
+08:51:21.098473 [error] [Thread-1 (]: 9 of 11 ERROR creating table model final.milestone2_6 .......................... [[31mERROR[0m in 0.70s]
+08:51:21.099472 [debug] [Thread-1 (]: Finished running node model.major.milestone2_6
+08:51:21.099472 [debug] [Thread-1 (]: Began running node model.major.my_first_dbt_model
+08:51:21.100473 [info ] [Thread-1 (]: 10 of 11 START table model final.my_first_dbt_model ............................ [RUN]
+08:51:21.101475 [debug] [Thread-1 (]: Acquiring new snowflake connection "model.major.my_first_dbt_model"
+08:51:21.102476 [debug] [Thread-1 (]: Began compiling node model.major.my_first_dbt_model
+08:51:21.102476 [debug] [Thread-1 (]: Compiling model.major.my_first_dbt_model
+08:51:21.106476 [debug] [Thread-1 (]: Writing injected SQL for node "model.major.my_first_dbt_model"
+08:51:21.107477 [debug] [Thread-1 (]: finished collecting timing info
+08:51:21.108476 [debug] [Thread-1 (]: Began executing node model.major.my_first_dbt_model
+08:51:21.111475 [debug] [Thread-1 (]: Writing runtime SQL for node "model.major.my_first_dbt_model"
+08:51:21.113476 [debug] [Thread-1 (]: Using snowflake connection "model.major.my_first_dbt_model"
+08:51:21.113476 [debug] [Thread-1 (]: On model.major.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.1.0", "profile_name": "major", "target_name": "dev", "node_id": "model.major.my_first_dbt_model"} */
+
+
+      create or replace transient table finalassessment_db.final.my_first_dbt_model  as
+      (/*
+    Welcome to your first dbt model!
+    Did you know that you can also configure models directly within SQL files?
+    This will override configurations stated in dbt_project.yml
+
+    Try changing "table" to "view" below
+*/
+
+
+
+with source_data as (
+
+    select 1 as id
+    union all
+    select null as id
+
+)
+
+select *
+from source_data
+
+/*
+    Uncomment the line below to remove records with null `id` values
+*/
+
+-- where id is not null
+      );
+08:51:21.114476 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+08:51:22.115780 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 1.0 seconds
+08:51:22.115780 [debug] [Thread-1 (]: finished collecting timing info
+08:51:22.115780 [debug] [Thread-1 (]: On model.major.my_first_dbt_model: Close
+08:51:22.231649 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '122b266f-8896-4ef7-b214-7a66ca376c8c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002635BC99E40>]}
+08:51:22.231649 [info ] [Thread-1 (]: 10 of 11 OK created table model final.my_first_dbt_model ....................... [[32mSUCCESS 1[0m in 1.13s]
+08:51:22.231649 [debug] [Thread-1 (]: Finished running node model.major.my_first_dbt_model
+08:51:22.231649 [debug] [Thread-1 (]: Began running node model.major.my_second_dbt_model
+08:51:22.231649 [info ] [Thread-1 (]: 11 of 11 START view model final.my_second_dbt_model ............................ [RUN]
+08:51:22.231649 [debug] [Thread-1 (]: Acquiring new snowflake connection "model.major.my_second_dbt_model"
+08:51:22.247277 [debug] [Thread-1 (]: Began compiling node model.major.my_second_dbt_model
+08:51:22.247277 [debug] [Thread-1 (]: Compiling model.major.my_second_dbt_model
+08:51:22.247277 [debug] [Thread-1 (]: Writing injected SQL for node "model.major.my_second_dbt_model"
+08:51:22.247277 [debug] [Thread-1 (]: finished collecting timing info
+08:51:22.247277 [debug] [Thread-1 (]: Began executing node model.major.my_second_dbt_model
+08:51:22.278528 [debug] [Thread-1 (]: Writing runtime SQL for node "model.major.my_second_dbt_model"
+08:51:22.281834 [debug] [Thread-1 (]: Using snowflake connection "model.major.my_second_dbt_model"
+08:51:22.282676 [debug] [Thread-1 (]: On model.major.my_second_dbt_model: /* {"app": "dbt", "dbt_version": "1.1.0", "profile_name": "major", "target_name": "dev", "node_id": "model.major.my_second_dbt_model"} */
+
+  create or replace  view finalassessment_db.final.my_second_dbt_model
+  
+   as (
+    -- Use the `ref` function to select from other models
+
+select *
+from finalassessment_db.final.my_first_dbt_model
+where id = 1
+  );
+08:51:22.282676 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+08:51:23.019032 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.74 seconds
+08:51:23.019032 [debug] [Thread-1 (]: finished collecting timing info
+08:51:23.019032 [debug] [Thread-1 (]: On model.major.my_second_dbt_model: Close
+08:51:23.166486 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '122b266f-8896-4ef7-b214-7a66ca376c8c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002635C4D0EE0>]}
+08:51:23.168487 [info ] [Thread-1 (]: 11 of 11 OK created view model final.my_second_dbt_model ....................... [[32mSUCCESS 1[0m in 0.93s]
+08:51:23.169487 [debug] [Thread-1 (]: Finished running node model.major.my_second_dbt_model
+08:51:23.171488 [debug] [MainThread]: Acquiring new snowflake connection "master"
+08:51:23.172488 [info ] [MainThread]: 
+08:51:23.173488 [info ] [MainThread]: Finished running 10 table models, 1 view model in 16.37s.
+08:51:23.174489 [debug] [MainThread]: Connection 'master' was properly closed.
+08:51:23.175490 [debug] [MainThread]: Connection 'list_finalassessment_db' was properly closed.
+08:51:23.175490 [debug] [MainThread]: Connection 'list_finalassessment_db_final' was properly closed.
+08:51:23.175490 [debug] [MainThread]: Connection 'model.major.my_second_dbt_model' was properly closed.
+08:51:23.186491 [info ] [MainThread]: 
+08:51:23.187491 [info ] [MainThread]: [31mCompleted with 5 errors and 0 warnings:[0m
+08:51:23.188491 [info ] [MainThread]: 
+08:51:23.189492 [error] [MainThread]: [33mDatabase Error in model milestone2_1 (models\example\milestone2_1.sql)[0m
+08:51:23.193492 [error] [MainThread]:   002031 (42601): SQL compilation error:
+08:51:23.194493 [error] [MainThread]:   Unsupported subquery type cannot be evaluated
+08:51:23.195495 [error] [MainThread]:   compiled SQL at target\run\major\models\example\milestone2_1.sql
+08:51:23.196495 [info ] [MainThread]: 
+08:51:23.198493 [error] [MainThread]: [33mDatabase Error in model milestone2_3 (models\example\milestone2_3.sql)[0m
+08:51:23.200494 [error] [MainThread]:   001003 (42000): SQL compilation error:
+08:51:23.202495 [error] [MainThread]:   syntax error line 3 at position 6 unexpected ')'.
+08:51:23.203495 [error] [MainThread]:   compiled SQL at target\run\major\models\example\milestone2_3.sql
+08:51:23.205495 [info ] [MainThread]: 
+08:51:23.209497 [error] [MainThread]: [33mDatabase Error in model milestone2_4 (models\example\milestone2_4.sql)[0m
+08:51:23.210497 [error] [MainThread]:   001003 (42000): SQL compilation error:
+08:51:23.210497 [error] [MainThread]:   syntax error line 3 at position 6 unexpected ')'.
+08:51:23.211497 [error] [MainThread]:   compiled SQL at target\run\major\models\example\milestone2_4.sql
+08:51:23.212497 [info ] [MainThread]: 
+08:51:23.215498 [error] [MainThread]: [33mDatabase Error in model milestone2_5 (models\example\milestone2_5.sql)[0m
+08:51:23.216498 [error] [MainThread]:   001003 (42000): SQL compilation error:
+08:51:23.218498 [error] [MainThread]:   syntax error line 3 at position 6 unexpected ')'.
+08:51:23.219499 [error] [MainThread]:   compiled SQL at target\run\major\models\example\milestone2_5.sql
+08:51:23.219499 [info ] [MainThread]: 
+08:51:23.220499 [error] [MainThread]: [33mDatabase Error in model milestone2_6 (models\example\milestone2_6.sql)[0m
+08:51:23.221499 [error] [MainThread]:   001003 (42000): SQL compilation error:
+08:51:23.222681 [error] [MainThread]:   syntax error line 3 at position 6 unexpected ')'.
+08:51:23.222681 [error] [MainThread]:   compiled SQL at target\run\major\models\example\milestone2_6.sql
+08:51:23.222681 [info ] [MainThread]: 
+08:51:23.222681 [info ] [MainThread]: Done. PASS=6 WARN=0 ERROR=5 SKIP=0 TOTAL=11
+08:51:23.222681 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002635C33B700>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002635C33BA30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002635C4D0DC0>]}
